@@ -29,23 +29,16 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-white/70 leading-relaxed text-lg font-light">
               <p>
-                My journey started with a fascination for building mobile experiences. 
-                What began as crafting Flutter apps quickly evolved into a deeper passion: 
-                <span className="text-white font-medium"> empowering the people who build them.</span>
+                My journey started with a simple curiosity — <span className="text-white font-medium">building mobile apps</span> and creating experiences people genuinely enjoy using. What began with Flutter development slowly turned into something bigger: helping developers learn, grow, and build with confidence.
               </p>
               <p>
-                As I shifted toward <span className="text-white font-medium">Developer Relations</span>, 
-                I realized that the strongest tech ecosystems aren&apos;t just built with code—they&apos;re 
-                built with education, trust, and community.
+                Over time, I found myself drawn more toward <span className="text-white font-medium">community, developer education</span>, and the excitement of sharing knowledge. From writing technical blogs to speaking at events and mentoring developers, I love making tech feel more approachable and less intimidating.
               </p>
               <p>
-                Today, I focus on bridging the gap between complex AI tools and developer success. 
-                Whether it&apos;s through technical writing, public speaking, or nurturing developer 
-                communities, my goal is to make high-impact technology accessible and exciting for everyone.
+                These days, I’m especially excited about the intersection of <span className="text-white font-medium">mobile development, AI, and Developer Experience</span>. I enjoy exploring how modern tools can make the developer journey faster, smoother, and more fun.
               </p>
               <p>
-                I thrive at the intersection of <span className="text-white font-medium">AI & Developer Experience</span>, 
-                always looking for the next way to simplify the developer journey.
+                For me, great ecosystems are built when developers feel <span className="text-white font-medium">supported, inspired, and connected</span> — and that’s the kind of impact I aim to create through everything I do.
               </p>
             </div>
           </motion.div>
