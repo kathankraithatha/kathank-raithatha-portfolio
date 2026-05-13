@@ -27,22 +27,22 @@ const ContactSection = () => {
               
               <div className="space-y-6">
                 <a href="mailto:kathankraithatha@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-colors">
-                    <Mail className="w-6 h-6 text-primary" />
+                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-xs text-white/30 uppercase tracking-widest font-bold">Email Me</p>
-                    <p className="text-white font-medium">kathankraithatha@gmail.com</p>
+                  <div className="min-w-0">
+                    <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Email Me</p>
+                    <p className="text-white font-medium text-sm md:text-base truncate sm:whitespace-normal">kathankraithatha@gmail.com</p>
                   </div>
                 </a>
                 
                 <a href="https://linkedin.com/in/kathank" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-secondary/20 transition-colors">
-                    <Linkedin className="w-6 h-6 text-secondary" />
+                  <div className="p-3 rounded-xl bg-white/5 group-hover:bg-secondary/20 transition-colors flex-shrink-0">
+                    <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
                   </div>
-                  <div>
-                    <p className="text-xs text-white/30 uppercase tracking-widest font-bold">LinkedIn</p>
-                    <p className="text-white font-medium">linkedin.com/in/kathank</p>
+                  <div className="min-w-0">
+                    <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold">LinkedIn</p>
+                    <p className="text-white font-medium text-sm md:text-base truncate sm:whitespace-normal">linkedin.com/in/kathank</p>
                   </div>
                 </a>
               </div>
