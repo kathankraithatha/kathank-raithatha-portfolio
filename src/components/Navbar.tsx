@@ -28,16 +28,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -100, x: "-50%", opacity: 0 }}
-      animate={{ y: 0, x: "-50%", opacity: 1 }}
-      className={`fixed left-1/2 z-50 transition-all duration-500 ease-in-out ${
-        scrolled 
-          ? "top-6 w-[90%] md:w-[85%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
-          : "top-4 w-[94%] md:w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "py-4 bg-bg-deep/90 backdrop-blur-md border-b border-white/10" : "py-6 bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center">
+      <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
           KR<span className="text-primary">.</span>
         </Link>
@@ -73,57 +69,38 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden fixed inset-0 z-[60] bg-bg-deep/95 backdrop-blur-2xl p-8 flex flex-col justify-center items-center"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-bg-deep/98 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
-            <button 
-              className="absolute top-8 right-8 text-white/70 hover:text-white"
-              onClick={() => setIsOpen(false)}
-            >
-              <X size={32} />
-            </button>
-
-            <div className="flex flex-col items-center space-y-8 text-center">
-              {navLinks.map((link, index) => (
-                <motion.div
+            <div className="flex flex-col p-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
                   key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  href={link.href}
+                  className="text-lg font-medium text-white/70 hover:text-white transition-colors"
+                  onClick={() => setIsOpen(false)}
                 >
-                  <Link
-                    href={link.href}
-                    className="text-3xl font-bold text-white/90 hover:text-primary transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
+                  {link.name}
+                </Link>
               ))}
-              
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="flex space-x-8 pt-12 border-t border-white/10 w-full justify-center"
-              >
+              <div className="flex space-x-6 pt-4 border-t border-white/10">
                 <a href="https://github.com/kathankraithatha" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
+                  <Github className="w-6 h-6 text-white/70" />
                 </a>
                 <a href="https://linkedin.com/in/kathank" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
+                  <Linkedin className="w-6 h-6 text-white/70" />
                 </a>
                 <a href="mailto:kathankraithatha@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <Mail className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
+                  <Mail className="w-6 h-6 text-white/70" />
                 </a>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 };
 
