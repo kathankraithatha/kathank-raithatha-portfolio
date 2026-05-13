@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import ProjectShowcase from "@/components/ProjectShowcase";
+import YouTubeShowcase from "@/components/YouTubeShowcase";
 import WritingAndSpeaking from "@/components/WritingAndSpeaking";
 import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutSection />
         <ExperienceTimeline />
         <ProjectShowcase />
+        <YouTubeShowcase />
         <WritingAndSpeaking />
         <SkillsSection />
         <ContactSection />
