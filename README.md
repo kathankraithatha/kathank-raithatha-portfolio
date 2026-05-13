@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 Kathank Raithatha | DevRel & Developer Ecosystems
 
-## Getting Started
+Welcome to the repository of my premium portfolio. I am a 20-year-old **Developer Relations Enthusiast**, **Technical Writer**, and **Community Builder** passionate about building products that empower developers.
 
-First, run the development server:
+![Portfolio Preview](https://raw.githubusercontent.com/kathankraithatha/kathank-raithatha-portfolio/main/public/preview.png) *(Note: Add a screenshot of your portfolio here!)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Mission
+> "Great developer ecosystems are not built only with products — they are built with education, trust, and community."
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Building high-impact developer communities and AI-driven experiences while bridging the gap between complex technology and developer success.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
+- **Cinematic Hero**: Animated typography and floating tech stack elements.
+- **Experience Timeline**: A vertical, glowing journey of my professional growth.
+- **Project Showcase**: Premium mockup-style cards featuring flagship projects like **CodeMind AI**.
+- **Technical Writing**: Blog-style showcase of my most impactful Medium articles.
+- **Public Speaking**: Event branding aesthetic for conferences and workshops.
+- **Futuristic UI**: Glassmorphism, neon gradients, and a matte black aesthetic.
 
-## Learn More
+## 📈 Impact
+- **30K+** Article Reads
+- **1000+** Developers Impacted
+- **10+** Public Sessions
+- **5+** Community Partnerships
 
-To learn more about Next.js, take a look at the following resources:
+## 🔗 Connect With Me
+- [LinkedIn](https://linkedin.com/in/kathank)
+- [Medium](https://medium.com/@kathankraithatha)
+- [GitHub](https://github.com/kathankraithatha)
+- [Email](mailto:kathankraithatha@gmail.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed with ❤️ by [Kathank Raithatha](https://github.com/kathankraithatha)
