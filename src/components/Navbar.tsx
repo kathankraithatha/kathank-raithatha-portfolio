@@ -32,11 +32,9 @@ const Navbar = () => {
       initial={{ y: -100, x: "-50%", opacity: 0 }}
       animate={{ y: 0, x: "-50%", opacity: 1 }}
       className={`fixed left-1/2 z-50 transition-all duration-500 ease-in-out ${
-        isOpen
-          ? "top-4 w-[94%] rounded-[2rem] liquid-glass py-6 px-8 shadow-2xl"
-          : scrolled 
-            ? "top-6 w-[90%] md:w-[85%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
-            : "top-4 w-[94%] md:w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
+        scrolled 
+          ? "top-6 w-[90%] md:w-[85%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
+          : "top-4 w-[94%] md:w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
       }`}
     >
       <div className="w-full flex justify-between items-center">
@@ -75,33 +73,52 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-8 border-t border-white/10 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden fixed inset-0 z-[60] bg-bg-deep/95 backdrop-blur-2xl p-8 flex flex-col justify-center items-center"
           >
-            <div className="flex flex-col py-6 space-y-4">
-              {navLinks.map((link) => (
-                <Link
+            <button 
+              className="absolute top-8 right-8 text-white/70 hover:text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              <X size={32} />
+            </button>
+
+            <div className="flex flex-col items-center space-y-8 text-center">
+              {navLinks.map((link, index) => (
+                <motion.div
                   key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium text-white/70 hover:text-white transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    href={link.href}
+                    className="text-3xl font-bold text-white/90 hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
-              <div className="flex space-x-6 pt-4 border-t border-white/10">
+              
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="flex space-x-8 pt-12 border-t border-white/10 w-full justify-center"
+              >
                 <a href="https://github.com/kathankraithatha" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-6 h-6 text-white/70" />
+                  <Github className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
                 </a>
                 <a href="https://linkedin.com/in/kathank" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-6 h-6 text-white/70" />
+                  <Linkedin className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
                 </a>
                 <a href="mailto:kathankraithatha@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <Mail className="w-6 h-6 text-white/70" />
+                  <Mail className="w-8 h-8 text-white/70 hover:text-primary transition-colors" />
                 </a>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
