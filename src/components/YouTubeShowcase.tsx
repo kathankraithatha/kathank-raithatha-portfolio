@@ -36,7 +36,7 @@ const YouTubeShowcase = () => {
                     <Clock size={18} />
                     <span className="text-sm font-bold uppercase tracking-wider">Format</span>
                   </div>
-                  <p className="text-white/80 font-medium">Bite-sized Visuals</p>
+                  <p className="text-white/80 font-medium">&lt;10Minutes</p>
                 </div>
                 <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
                   <div className="flex items-center gap-3 mb-1 text-red-500/80">
