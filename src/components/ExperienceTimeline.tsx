@@ -83,26 +83,26 @@ const ExperienceTimeline = () => {
                 <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-bg-deep border-2 border-primary z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
 
                 {/* Content Card */}
-                <div className="w-full md:w-1/2 pl-8 md:pl-0">
+                <div className="w-full md:w-1/2 pl-6 md:pl-0">
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="p-8 rounded-3xl glass-morphism border border-white/5 hover:border-primary/20 transition-all group"
+                    className="p-5 md:p-8 rounded-[2rem] glass-morphism border border-white/5 hover:border-primary/20 transition-all group"
                     style={{ borderLeft: `4px solid ${exp.color}` }}
                   >
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-6">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                        <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors">
                           {exp.company}
                         </h3>
-                        <p className="text-white/60 font-medium">{exp.role}</p>
+                        <p className="text-white/60 font-medium text-sm md:text-base">{exp.role}</p>
                       </div>
-                      <span className="text-xs font-mono text-white/30 uppercase tracking-widest bg-white/5 px-3 py-1 rounded-full">
+                      <span className="text-[10px] md:text-xs font-mono text-white/40 uppercase tracking-widest bg-white/5 px-3 py-1 rounded-full whitespace-nowrap">
                         {exp.period}
                       </span>
                     </div>
                     <ul className="space-y-3">
                       {exp.description.map((item, idx) => (
-                        <li key={idx} className="text-sm text-white/40 flex items-start gap-2">
+                        <li key={idx} className="text-xs md:text-sm text-white/40 flex items-start gap-3 leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/40 flex-shrink-0" />
                           {item}
                         </li>
