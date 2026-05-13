@@ -19,6 +19,10 @@
     from { box-shadow: 0 0 10px rgba(139, 92, 246, 0.5); }
     to { box-shadow: 0 0 20px rgba(139, 92, 246, 0.8); }
   }
+
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
 }
 
 :root {

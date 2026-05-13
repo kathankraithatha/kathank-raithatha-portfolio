@@ -23,8 +23,13 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <span className="px-4 py-2 rounded-full glass border border-white/10 text-sm font-medium text-primary-foreground tracking-wide">
-              20-year-old Developer & DevRel Enthusiast
+            <span className="relative inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-2.5 rounded-full glass border border-white/10 text-[10px] sm:text-xs md:text-sm font-medium text-white tracking-widest uppercase overflow-hidden group">
+              <span className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/20 opacity-50" />
+              <span className="relative z-10 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                20-year-old Developer & DevRel Enthusiast
+              </span>
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform" />
             </span>
           </motion.div>
 
