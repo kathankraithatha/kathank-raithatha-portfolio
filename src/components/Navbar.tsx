@@ -28,14 +28,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
+    <motion.nav
+      initial={{ y: -100, x: "-50%", opacity: 0 }}
+      animate={{ y: 0, x: "-50%", opacity: 1 }}
+      className={`fixed left-1/2 z-50 transition-all duration-500 ease-in-out ${
         scrolled 
           ? "top-6 w-[90%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
-          : "top-0 w-full bg-transparent py-8 px-6"
+          : "top-4 w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="w-full flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
           KR<span className="text-primary">.</span>
         </Link>
@@ -102,7 +104,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 
