@@ -2,14 +2,14 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const techStack = [
   "Gemini API", "Flutter", "Firebase", "Python", "AI Agents", "Community"
 ];
 
 const HeroSection = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -19,6 +19,13 @@ const HeroSection = () => {
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
+
+  const socialLinks = [
+    { Icon: Github, href: "https://github.com/kathankraithatha" },
+    { Icon: Linkedin, href: "https://linkedin.com/in/kathank" },
+    { Icon: () => <span className="font-bold text-xl leading-none">M</span>, href: "https://medium.com/@kathankraithatha" },
+    { Icon: Mail, href: "mailto:kathankraithatha@gmail.com" }
+  ];
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -111,25 +118,23 @@ const HeroSection = () => {
 
           {/* Social Icons Staggered */}
           <div className="mt-16 flex items-center gap-8">
-            {[
-              { Icon: Github, href: "https://github.com/kathankraithatha" },
-              { Icon: Linkedin, href: "https://linkedin.com/in/kathank" },
-              { Icon: () => <span className="font-bold text-xl">M</span>, href: "https://medium.com/@kathankraithatha" },
-              { Icon: Mail, href: "mailto:kathankraithatha@gmail.com" }
-            ].map((social, i) => (
-              <motion.a
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/40 hover:text-white transition-colors"
-              >
-                {typeof social.Icon === 'function' ? <social.Icon /> : <social.Icon size={24} />}
-              </motion.a>
-            ))}
+            {socialLinks.map((social, i) => {
+              const Icon = social.Icon;
+              return (
+                <motion.a
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 + i * 0.1 }}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/40 hover:text-white transition-colors"
+                >
+                  <Icon size={24} />
+                </motion.a>
+              );
+            })}
           </div>
           
           <motion.p
