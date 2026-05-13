@@ -51,7 +51,7 @@ const ContactSection = () => {
                 {[
                   { Icon: Github, href: "https://github.com/kathankraithatha" },
                   { Icon: Linkedin, href: "https://linkedin.com/in/kathank" },
-                  { Icon: X, href: "https://x.com/kathank" }
+                  { Icon: X, href: "https://x.com/Kathank25" }
                 ].map((social, i) => (
                   <motion.a
                     key={i}
