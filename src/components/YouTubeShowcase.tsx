@@ -63,28 +63,28 @@ const YouTubeShowcase = () => {
 
           {/* Right Side: Visual Preview */}
           <div className="flex-1 w-full max-w-2xl">
-            <motion.div
+            <motion.a
+              href="https://www.youtube.com/playlist?list=PLVWvLfqYFBT3mUGdxdStcHktNFLLTeg7a"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative aspect-video rounded-3xl overflow-hidden group border-2 border-white/10"
+              className="relative aspect-video rounded-3xl overflow-hidden group border-2 border-white/10 block cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10 group-hover:from-red-600/40 transition-all duration-500" />
               
-              {/* Thumbnail Placeholder with Image Generator or static URL */}
-              {/* Using a nice stylized placeholder since I can't fetch the real one easily without API */}
-              <div className="absolute inset-0 bg-neutral-900 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Youtube size={64} className="text-red-600 mx-auto mb-4 opacity-50" />
-                  <h4 className="text-2xl font-bold mb-2">System Design for Beginners</h4>
-                  <p className="text-white/40 text-sm">PLVWvLfqYFBT3mUGdxdStcHktNFLLTeg7a</p>
-                </div>
-              </div>
+              {/* Thumbnail Image */}
+              <img 
+                src="/youtube-thumbnail.png" 
+                alt="System Design Series Thumbnail"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
 
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform">
+                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
                   <Play size={32} fill="currentColor" className="ml-1" />
                 </div>
               </div>
@@ -92,9 +92,9 @@ const YouTubeShowcase = () => {
               {/* Badge */}
               <div className="absolute top-6 left-6 z-20 bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                <span className="text-xs font-bold tracking-widest uppercase">YouTube Playlist</span>
+                <span className="text-xs font-bold tracking-widest uppercase text-white/90">Click to Watch Playlist</span>
               </div>
-            </motion.div>
+            </motion.a>
           </div>
 
         </div>
