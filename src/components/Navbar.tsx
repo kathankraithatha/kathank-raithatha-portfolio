@@ -32,9 +32,11 @@ const Navbar = () => {
       initial={{ y: -100, x: "-50%", opacity: 0 }}
       animate={{ y: 0, x: "-50%", opacity: 1 }}
       className={`fixed left-1/2 z-50 transition-all duration-500 ease-in-out ${
-        scrolled 
-          ? "top-6 w-[90%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
-          : "top-4 w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
+        isOpen
+          ? "top-4 w-[94%] rounded-[2rem] liquid-glass py-6 px-8 shadow-2xl"
+          : scrolled 
+            ? "top-6 w-[90%] md:w-[85%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
+            : "top-4 w-[94%] md:w-[95%] max-w-7xl rounded-2xl bg-white/5 backdrop-blur-sm py-5 px-8"
       }`}
     >
       <div className="w-full flex justify-between items-center">
@@ -76,9 +78,9 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 rounded-3xl liquid-glass overflow-hidden"
+            className="md:hidden mt-8 border-t border-white/10 overflow-hidden"
           >
-            <div className="flex flex-col p-6 space-y-4">
+            <div className="flex flex-col py-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
