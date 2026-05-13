@@ -29,11 +29,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-4 bg-bg-deep/80 backdrop-blur-md border-b border-white/10" : "py-6 bg-transparent"
+      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out ${
+        scrolled 
+          ? "top-6 w-[90%] max-w-5xl rounded-full liquid-glass py-3 px-8 shadow-2xl" 
+          : "top-0 w-full bg-transparent py-8 px-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
           KR<span className="text-primary">.</span>
         </Link>
@@ -72,7 +74,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg-deep/95 backdrop-blur-xl border-b border-white/10"
+            className="md:hidden mt-4 rounded-3xl liquid-glass overflow-hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
